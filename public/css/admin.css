@@ -11,10 +11,7 @@
 html{
     font-size: 80.5%;
 }
-
- 
-
-/* ..................................................................errror section starts here........................................................... */
+/* .....errror section starts here. */
 .info-wrapper{
     margin-left: 30px;
 }
@@ -89,15 +86,7 @@ html{
 .error-wrapper > .info-wrapper > p>a:hover{
     text-decoration: underline;
 }
-
-
-
-
-
-
-/* ..........................................................FOOTER SECTION STARTS HERE...................................................... */
-
-
+/* .FOOTER SECTION STARTS HERE. */
 footer{
     position: fixed;
     bottom: 0;
@@ -231,9 +220,6 @@ footer .footer_contents h2{
         display: block;
     }
 }
-
-
-
 
 @media screen and (max-width: 472px){
     header nav{

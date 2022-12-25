@@ -91,9 +91,10 @@ span{
     top: 85px;
     width: 100%;
     margin-left: 5rem;
+    padding: 5px 5px;
 }
 .card{
-    width: 20rem;
+    width: 18rem;
     height: 23rem;
     margin-bottom: 10px;
     overflow: hidden;
@@ -101,7 +102,7 @@ span{
     padding: 5px 5px; 
 } 
 .card img{
-    width: 310px;
+    width: 275px;
     height: 250px;
     border-radius: 10px;
 } 
@@ -148,10 +149,9 @@ span{
 /* style login form */
 
 .loginContainer{
-    /* background-image: url("https://media.istockphoto.com/id/1226883131/photo/human-figure-icon-graphic-as-user-login-button-on-white-keyboard.jpg?b=1&s=170667a&w=0&k=20&c=9jn8gBXXYJ08mQO7gUPn1oMslu1RlMDL_EDoNBNS1NE="); */
+    background-image: url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
 }
 h2{
     text-align: center;
@@ -165,7 +165,7 @@ h2{
     border-radius: 20px;
     margin-top: 100px;
     margin-bottom: 40px;
-    background-color: rgb(243, 204, 210);
+    background-color: rgba(83, 209, 247, 0.734);
 }
 .form-label{
     padding-left: 20px;
@@ -193,6 +193,7 @@ form .btn:hover{
     background-color: rgb(201, 106, 233);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
 
  
 

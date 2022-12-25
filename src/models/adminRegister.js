@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
+// create schema 
 const adminEmployeeSchema = new mongoose.Schema({
     firstname:{
         type: String,
@@ -30,7 +31,7 @@ const adminEmployeeSchema = new mongoose.Schema({
     },
 })
 
-//middleware uae
+//middleware use
 adminEmployeeSchema.pre("save", async function(next){
     if(this.isModified("password")){
         //const passwordHash = await bcrypt.hash(password, 10);

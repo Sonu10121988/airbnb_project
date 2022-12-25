@@ -6,22 +6,10 @@ h1 {
   font-weight: bold;
 }
 
-/* h1, p {
-  margin: 1em auto;
-  text-align: center;
-} */
-
 form {
-  /* width: 400px; */
   margin-right: 40px;
-  /* margin: 0 auto; */
-  /* padding-bottom: 2em; */
 }
 
-/* fieldset {
-  border: none;
-  padding: 1.2rem 0;
-} */
 label {
   font-size: 1rem;
   font-weight: bold;
@@ -31,51 +19,32 @@ label {
 
 .inline {
   width: unset;
-  /* margin: 0 0.5em 0 0; */
   vertical-align: middle;
 }
 
 input {
   margin: 3px 0 0 15px;
   width: 100%;
-  /* border: none; */
   border-radius: 5px;
   color: rgba(10, 10, 35, 0.7);
-  /* min-height: 2em; */
 }
 .room {
   width: 7rem;
   padding: 3px;
-  /* border: none; */
   background-color: rgba(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
 }
-/* select {           
-			position: relative;
-      border-radius: 5px;
-      display: inline-block;
-		} */
-
-/* input{
-  border: none;
-  border-radius: 5px;
-  color: rgba(10, 10, 35, 0.7);
-} */
 
 input[type="submit"] {
-  /* display: block; */
   width: 40%;
   float: right;
   margin-top: 0px;
-  /* margin-left: 3rem; */
-  /* margin: -1em auto; */
   height: 2.5em;
   font-size: 1.3rem;
   font-weight: bold;
   border-radius: 10px;
   background-color: brown;
   border-color: white;
-  /* min-width: 300px; */
   color: white;
 }
 .reviewOffersRight{
