@@ -1,4 +1,6 @@
 .container-fluid{
+    width: 100%;
+    height: 100%;
     background-image: url("https://images.moneycontrol.com/static-mcnews/2021/04/Roof-top-pool-2-taj-goa.jpg?impolicy=website&width=770&height=431");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,12 +21,27 @@
     color: brown;
 }
 .col-12{
-    margin-top: -15px;
+    margin-top: 5px;
 }
 #exampleInputPassword1{
     width: 450px;
 }
 #exampleInputEmail1{
     width: 450px;
+}
+
+/* Add media queries here */
+@media screen and (max-width: 600px) {
+    .container-fluid{
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+    .signupForm {
+        width: 470px;
+        height: 680px;
+        margin-left: 3px;
+        margin-right: 3px;
+    } 
 }
 

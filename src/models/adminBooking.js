@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-// create schema for admin booking information
+// create schema for admin booking Detail :-
 const adminBookingSchema = new mongoose.Schema({
     homename:{
         type: String,
@@ -31,7 +31,7 @@ const adminBookingSchema = new mongoose.Schema({
 })
 
 
-//create collection
+//create collection in Database :-
 const adminDetail = new mongoose.model("adminBooking", adminBookingSchema);
 
 module.exports= adminDetail;

@@ -46,7 +46,7 @@ adminEmployeeSchema.pre("save", async function(next){
 })
 
 
-//create collection
+//create collection in Database :-
 const adminRegister = new mongoose.model("AdminRegister", adminEmployeeSchema);
 
 module.exports= adminRegister;

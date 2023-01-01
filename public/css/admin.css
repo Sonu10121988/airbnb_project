@@ -13,13 +13,12 @@ html{
 }
 /* .....errror section starts here. */
 .info-wrapper{
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .error-wrapper{
     width: 90%;
     height: 100%;
-    margin: 1rem auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,14 +26,14 @@ html{
 }
 
 .error-wrapper > .image-wrapper{
-    width: 75%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     background-position: center;
     background-size: cover;
 }
 
 .error-wrapper > .image-wrapper > img{
-    height: 100%;
+    height: 90%;
     width: 100%;
 }
 
@@ -86,71 +85,6 @@ html{
 .error-wrapper > .info-wrapper > p>a:hover{
     text-decoration: underline;
 }
-/* .FOOTER SECTION STARTS HERE. */
-footer{
-    position: fixed;
-    bottom: 0;
-    border-top: 1.2px solid rgb(210, 208, 208);
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 4rem;
-    background: #fff;
-    margin-top: auto;
-}
-
-footer .reserve_tab{
-    display: none;
-}
-
-footer .footer_contents{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-}
-
-footer .footer_contents>p{
-    font-size: 1.5rem;
-    letter-spacing: 0.7px;
-    color: rgb(152, 152, 152);
-}
-
-footer .footer_contents .terms{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-footer .footer_contents .terms p{
-    font-size: 1.3rem;
-    letter-spacing: 0.7px;
-    text-transform: capitalize;
-    color: rgb(152, 152, 152);
-}
-
-footer .footer_contents h2:nth-child(1){
-    font-size: 1.5rem;
-}
-
-footer .footer_contents h2>span{
-    font-size: 2rem;
-}
-
-footer .footer_contents h2{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    font-size: 1.3rem;
-    letter-spacing: 0.7px;
-}
 .admin_signup a{
     height: 100%;
     width: 100%;
@@ -161,87 +95,53 @@ footer .footer_contents h2{
 }
 
 
-@media screen and (max-width: 1000px){
-    header nav .nav-menu:nth-child(1){
-        display: none;
+/* add media queries 600px */
+@media screen and (max-width: 600px){
+  
+    .info-wrapper{
+        margin-left: 10px;
     }
-
-    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(1){
-        display: none;
-    }
-
-    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(2){
-        display: none;
-    }
-
-    body>.properties{
-        width: 100%;
-    }
-
-    .properties .card{
-        width: 32%;
-    }
-
-    .properties .card .property-details p{
-        font-size: 1.2rem;
-    }
-}
-
-
-@media screen and (max-width: 750px){
-    header{
-        width: 100%;
-    }
-
-    header nav{
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    body>.properties{
+    
+    .error-wrapper{
         width: 95%;
-        
+        height: 100%;
     }
-
-    .properties .card{
-        width: 45%;
-        
+    
+    .error-wrapper > .image-wrapper{
+        width: 50%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
     }
-
-    footer .footer_contents>.terms{
-        display: none;
+    
+    .error-wrapper > .info-wrapper{
+        gap: 0.5rem;
     }
-
-    footer .footer_contents h2{
-        display: none;
+    
+    .error-wrapper > .info-wrapper > h1>span{
+        font-size: 2.5rem;
     }
-
-    footer .footer_contents h2:nth-child(1){
-        display: block;
+    
+    .error-wrapper > .info-wrapper > h1{
+        font-size: 2rem;
     }
-}
-
-@media screen and (max-width: 472px){
-    header nav{
-        padding: 0.2rem;
-        gap: 0rem;
+    
+    .error-wrapper > .info-wrapper > h2{
+        margin-top: 10px;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
-
-    header nav .nav-menu:nth-child(2){
-        transform: translateX(0rem);
+    
+    .error-wrapper > .info-wrapper > p{
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
-
-    header nav .nav-menu:nth-child(3)>.user-menu{
-        font-size: 1.2rem;
-        padding:  2rem 0.5rem;
-    }
-
-    header nav .nav-menu:nth-child(2)>span{
-        font-size: 1.2rem;
-    }
-
-    .properties .card{
-        width: 100%;
-        
+    
+    .error-wrapper > .info-wrapper > p>a{
+        font-size: 2rem;
+        margin-right: 5px;
+        color: #ff385dbd;
     }
 }
+/* media queries end here */

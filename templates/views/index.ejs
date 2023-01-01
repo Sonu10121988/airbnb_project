@@ -70,9 +70,6 @@
                 <hr class="dropdown-divider" />
               </li>
               <li><a class="dropdown-item" href="/admin">Host your home</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Host your Experience</a>
-              </li>
               <li><a class="dropdown-item" href="/help">Help</a></li>
             </ul>
           </div>
@@ -81,6 +78,12 @@
       <!-- header section end -->
       <!-- image card section start -->
       <section class="container-fluid container">
+        <% if (message) { %>
+          <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+              <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button>
+              <strong><%= message.message %></strong>
+          </div>
+          <% } %> 
         <div class="row">
           <%data.forEach((element)=>{%>
           <div class="col-sm-3 column">

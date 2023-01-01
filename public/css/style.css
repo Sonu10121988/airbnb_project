@@ -94,7 +94,7 @@ span{
     padding: 5px 5px;
 }
 .card{
-    width: 18rem;
+    width: 20rem;
     height: 23rem;
     margin-bottom: 10px;
     overflow: hidden;
@@ -102,7 +102,7 @@ span{
     padding: 5px 5px; 
 } 
 .card img{
-    width: 275px;
+    width: 310px;
     height: 250px;
     border-radius: 10px;
 } 
@@ -146,54 +146,31 @@ span{
     color: rgb(42, 41, 41);
    font-weight: bold;
 }
-/* style login form */
 
-.loginContainer{
-    background-image: url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
-    display: flex;
-    justify-content: center;
+/* add media queries */
+@media screen and (max-width: 600px) {
+    .navbarMiddle{
+        display: none;
+    } 
+    .dropdown{
+         margin-right: 45px;
+    }
+    .navbarHost a {
+        margin-right: 5px;
 }
-h2{
-    text-align: center;
-    padding: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.container{
+    margin-left: 5px;
 }
-.loginContainer form{
-    width: 700px;
-    height: 500px;
-    border: 1px solid gray;
-    border-radius: 20px;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    background-color: rgba(83, 209, 247, 0.734);
+.card{
+    width: 34rem;
+    overflow: hidden;
+} 
+.card img{
+    width: 527px;
+} 
+.footerLeft{
+    display: none;
 }
-.form-label{
-    padding-left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 10px;
 }
-.loginContainer form input{
-    width: 500px;
-    padding-left: 20px;
-    margin-left: 20px;
-}
- form .btn{
-    /* display: flex;
-    justify-content: center; */
-    margin-left: 13rem;
-    margin-top: 3rem;
-    width: 150px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: brown;
-}
-form .btn:hover{
-    background-color: rgb(201, 106, 233);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-
  
 

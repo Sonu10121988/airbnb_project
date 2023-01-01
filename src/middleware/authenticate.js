@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const Register = require("../models/register");
 
+// Here Use Authentication User :-
 const auth = async (req, res, next) =>{
   try{
    
@@ -8,7 +9,7 @@ const auth = async (req, res, next) =>{
     const verifyUser = jwt.verify(token, process.env.SECRET_KEY);
     console.log(verifyUser);
 
-    //get user data
+    //get user data :-
     const user = await Register.findOne({_id:verifyUser._id});
     console.log(user);
 
@@ -18,7 +19,11 @@ const auth = async (req, res, next) =>{
     next();
 
   } catch(error){
-    res.status(401).send(error);
+    req.session.message = {
+      type: "danger",
+      message: "Please Login First User!!!",
+  };
+  res.redirect('/');
   }
 }
 

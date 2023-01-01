@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="/css/login.css" />
     <title> admin Login Form</title>
     <style>
+       .loginContainer{
+        background-image: url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .loginContainer form{
+        background: transparent;
+      }
+      h2{
+        color: brown;
+      }
         .admin_signup {
     border: 1px solid black;
     margin-left: 40px;
@@ -64,7 +75,9 @@
         <b><a href="/adminSignUp" class="admin_signup">Sign Up</a></b>
       </form>
     </div>
+    <!-- Start Footer Section -->
     <%- include('../partials/footer') %>
+    <!-- end Footer Section -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

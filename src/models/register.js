@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 
+// Create schema :-
 const employeeSchema = new mongoose.Schema({
     firstname:{
         type: String,
@@ -36,7 +37,7 @@ const employeeSchema = new mongoose.Schema({
         }
     }]
 })
-// generate token
+// generate token :-
 employeeSchema.methods.generateAuthToken = async function(){
   try{
     const token = jwt.sign({_id:this._id.toString()}, process.env.SECRET_KEY);
@@ -49,7 +50,7 @@ employeeSchema.methods.generateAuthToken = async function(){
   }
 }
 
-// converting password into hash 
+// converting password into hash :-
 employeeSchema.pre("save", async function(next){
     if(this.isModified("password")){
         //const passwordHash = await bcrypt.hash(password, 10);
@@ -61,7 +62,7 @@ employeeSchema.pre("save", async function(next){
 })
 
 
-//create collection
+//create collection in Database :-
 const Register = new mongoose.model("Register", employeeSchema);
 
 module.exports= Register;
