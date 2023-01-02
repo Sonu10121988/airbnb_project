@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 // create schema 
-const adminEmployeeSchema = new mongoose.Schema({
+const adminUserSchema = new mongoose.Schema({
     firstname:{
         type: String,
         required: true
@@ -32,7 +32,7 @@ const adminEmployeeSchema = new mongoose.Schema({
 })
 
 //middleware use
-adminEmployeeSchema.pre("save", async function(next){
+adminUserSchema.pre("save", async function(next){
     if(this.isModified("password")){
         //const passwordHash = await bcrypt.hash(password, 10);
         console.log(`the current password is ${this.password}`);
@@ -47,6 +47,6 @@ adminEmployeeSchema.pre("save", async function(next){
 
 
 //create collection in Database :-
-const adminRegister = new mongoose.model("AdminRegister", adminEmployeeSchema);
+const adminRegister = new mongoose.model("AdminRegister", adminUserSchema);
 
 module.exports= adminRegister;

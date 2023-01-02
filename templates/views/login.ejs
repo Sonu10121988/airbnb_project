@@ -23,6 +23,12 @@
       <%- include('../partials/navbar') %>
     <!-- End the navbar -->
       <form action="/login" method="POST">
+        <% if (message) { %>
+      <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+          <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button>
+          <strong><%= message.message %></strong>
+      </div>
+      <% } %> 
         <h2>Welcome to Login</h2>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"

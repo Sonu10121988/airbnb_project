@@ -18,7 +18,7 @@ app.set("views", path.join(__dirname, "../templates/views"));
 
 const port = process.env.PORT || 3000;
 
-// use session storage for display message
+// use session storage for display message :-
 app.use(
   session({
     secret: process.env.SESSION_SECRET_KEY,
@@ -36,19 +36,19 @@ app.use((req, res, next) => {
   next();
 });
 
-// Add require models file
+// Add require models file :-
 const Register = require("./models/register");
 const adminRegister = require("./models/adminRegister");
 const adminDetail = require("./models/adminBooking");
 const { MongoClient } = require("mongodb");
 
-//find data for mongodb atlas
+//find data for mongodb atlas :-
 async function FindData() {
   const uri =
     "mongodb+srv://sonunew:sonu10121988@mongodbtutorial.ouy1fom.mongodb.net/?retryWrites=true&w=majority";
   const client = new MongoClient(uri);
 
-  // connection from database
+  // connection from database :-
   await client.connect();
   var result = await client
     .db("sample_airbnb")
@@ -60,7 +60,7 @@ async function FindData() {
   return result;
 }
 
-// fetch data from mongodb in sample airbnb
+// fetch data from mongodb in sample airbnb :-
 async function FindData1(id) {
   const uri =
     "mongodb+srv://sonunew:sonu10121988@mongodbtutorial.ouy1fom.mongodb.net/?retryWrites=true&w=majority";
@@ -75,7 +75,7 @@ async function FindData1(id) {
   return result;
 }
 
-//find data from mongodb atlas for admin booking detail page
+//find data from mongodb atlas for admin booking detail page :-
 async function FindData2() {
   const uri =
     "mongodb+srv://sonunew:sonu10121988@mongodbtutorial.ouy1fom.mongodb.net/?retryWrites=true&w=majority";
@@ -92,7 +92,7 @@ async function FindData2() {
   return adminResult;
 }
 
-// fetch data from mongodb atlas for admin booking detail page
+// fetch data from mongodb atlas for admin booking detail page :-
 async function FindData3(homename) {
   const uri =
     "mongodb+srv://sonunew:sonu10121988@mongodbtutorial.ouy1fom.mongodb.net/?retryWrites=true&w=majority";
@@ -124,7 +124,7 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-//create a new user in  database
+//create a new user in  database :-
 app.post("/register", async (req, res) => {
   try {
     const password = req.body.password;
@@ -139,17 +139,17 @@ app.post("/register", async (req, res) => {
         confirmpassword: cpassword,
       });
 
-      //   Here Use jwt middleware
+      //   Here Use jwt middleware :-
       const token = await registerEmployee.generateAuthToken();
 
-      //   we create cookie
+      //   we create cookie :-
       res.cookie("jwt", token, {
         expires: new Date(Date.now() + 50000),
         httpOnly: true,
       });
 
       const registered = await registerEmployee.save();
-      // use session storage for display message
+      // use session storage for display message :-
       req.session.message = {
         type: "success",
         message: "Congrates Your Signup Successfully!",
@@ -157,18 +157,21 @@ app.post("/register", async (req, res) => {
       res.redirect("/");
     } else {
       res.json({ message: err.message, type: "success" });
-      res.send("password are not match");
     }
   } catch (e) {
-    res.status(400).send(e);
+    req.session.message = {
+      type: "danger",
+      message: "Confirm password are not match",
+    };
+    res.redirect("/signup");
   }
 });
 
-// It's route for login page
+// It's route for login page :-
 app.get("/login", (req, res) => {
   res.render("login");
 });
-// We check login Detail
+// We check login Detail :-
 app.post("/login", async (req, res) => {
   try {
     const email = req.body.email;
@@ -178,20 +181,20 @@ app.post("/login", async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, useremail.password);
 
-    //   here use json web token
+    //   here use json web token :-
     const token = await useremail.generateAuthToken();
     console.log("the token part" + token);
-    //  end jwt
+    //  end jwt :-
 
-    //  create cookie
+    //  create cookie :-
     res.cookie("jwt", token, {
       expires: new Date(Date.now() + 600000),
       httpOnly: true,
     });
-    // get cookie
+    // get cookie :-
     console.log(`this is the cookie awesome ${req.cookies.jwt}`);
 
-    //   if login detail match display session storage message
+    //   if login detail match display session storage message :-
     if (isMatch) {
       req.session.message = {
         type: "info",
@@ -200,14 +203,17 @@ app.post("/login", async (req, res) => {
       res.redirect("/");
     } else {
       res.json({ message: err.message, type: "info" });
-      res.send(" Invalid password details.");
     }
   } catch (error) {
-    res.status(400).send("invalid login details.");
+    req.session.message = {
+      type: "danger",
+      message: "Password Do Not Match!!!",
+    };
+    res.redirect("/login");
   }
 });
 
-// It's route for signup page
+// It's route for signup page :-
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
@@ -220,7 +226,7 @@ app.get("/details/:id", auth, async (req, res) => {
   });
 });
 
-//admin booking detail page rander
+//admin booking detail page rander :-
 app.get("/adminBookingdetail/:homename", auth, async (req, res) => {
   //     res.render(req.params.homename);
   //    console.log(req.params.homename);
@@ -231,7 +237,7 @@ app.get("/adminBookingdetail/:homename", auth, async (req, res) => {
   });
 });
 
-// For User Log Out
+// For User Log Out :-
 app.get("/logout", async (req, res) => {
   try {
     //logout user current token(delete) in filter method :-
@@ -239,11 +245,11 @@ app.get("/logout", async (req, res) => {
     //     return currElement.token !== req.token
     // })
 
-    //logout user from all token :-
+    //logout user from all token(delete) :-
     //req.user.tokens = [];
 
     res.clearCookie("jwt");
-    // use session storage for display message
+    // use session storage for display message :-
     req.session.message = {
       type: "danger",
       message: "User Logout Successfully!!",
@@ -289,10 +295,13 @@ app.post("/adminRegister", async (req, res) => {
       res.redirect("/adminCrud");
     } else {
       res.json({ message: err.message, type: "success" });
-      res.send("password are not match");
     }
   } catch (e) {
-    res.status(400).send(e);
+    req.session.message = {
+      type: "primary",
+      message: "Password Do Not Match!!!",
+    };
+    res.redirect("/adminSignUp");
   }
 });
 
@@ -319,10 +328,13 @@ app.post("/adminlogin", async (req, res) => {
       res.redirect("/adminCrud");
     } else {
       res.json({ message: err.message, type: "info" });
-      res.send(" Invalid password details.");
     }
   } catch (error) {
-    res.status(400).send("invalid login details.");
+    req.session.message = {
+      type: "primary",
+      message: "Password Do Not Match!!!",
+    };
+    res.redirect("/adminLogin");
   }
 });
 

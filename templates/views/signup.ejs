@@ -23,6 +23,12 @@
       <%- include('../partials/navbar'); %>
       <!-- End here navbar -->
       <div class="signupForm">
+        <% if (message) { %>
+          <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+              <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close"></button>
+              <strong><%= message.message %></strong>
+          </div>
+          <% } %> 
         <h2>Welcome to Airbnb</h2>
         <form
           action="/register"
