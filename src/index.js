@@ -113,7 +113,7 @@ async function FindData3(homename) {
 app.get("/", async (req, res) => {
   let data = await FindData();
   let data2 = await FindData2();
-  console.log(data2);
+  //console.log(data2);
   res.render("index", {
     data: data,
     data2: data2,
@@ -183,7 +183,7 @@ app.post("/login", async (req, res) => {
 
     //   here use json web token :-
     const token = await useremail.generateAuthToken();
-    console.log("the token part" + token);
+    //console.log("the token part" + token);
     //  end jwt :-
 
     //  create cookie :-
@@ -191,8 +191,9 @@ app.post("/login", async (req, res) => {
       expires: new Date(Date.now() + 600000),
       httpOnly: true,
     });
+    
     // get cookie :-
-    console.log(`this is the cookie awesome ${req.cookies.jwt}`);
+    //console.log(`this is the cookie awesome ${req.cookies.jwt}`);
 
     //   if login detail match display session storage message :-
     if (isMatch) {
@@ -371,7 +372,7 @@ app.post("/adminBooking", async (req, res, err) => {
 // admin crud operation Use (get all data from database) :-
 app.get("/adminCrud", async (req, res) => {
   let data2 = await FindData2();
-  console.log(data2);
+  //console.log(data2);
   res.render("adminCrud", {
     data2: data2,
   });

@@ -232,3 +232,6 @@ table{
     background-color: var(--dark);
     color: var(--border);
 }
+.alert{
+    margin-top: -80px;
+}
