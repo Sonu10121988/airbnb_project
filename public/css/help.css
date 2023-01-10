@@ -204,4 +204,10 @@ textarea:valid+label {
     width: 38px;
     height: 38px;
   }
+  .dropdown{
+    margin-right: 15px;
+  }
+  .navbarHost {
+    display: none;
+   }
 }

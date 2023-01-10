@@ -61,4 +61,10 @@ h2{
     .loginContainer form input{
         width: 350px;
     }
+    .dropdown{
+        margin-right: 15px;
+      }
+      .navbarHost {
+        display: none;
+       }
 }

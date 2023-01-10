@@ -26,8 +26,8 @@ html{
 }
 
 .error-wrapper > .image-wrapper{
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     background-position: center;
     background-size: cover;
 }
@@ -99,7 +99,8 @@ html{
 @media screen and (max-width: 600px){
   
     .info-wrapper{
-        margin-left: 10px;
+        margin-left: 3.5rem;
+        margin-top: 15px;
     }
     
     .error-wrapper{
@@ -108,7 +109,7 @@ html{
     }
     
     .error-wrapper > .image-wrapper{
-        width: 50%;
+        width: 70%;
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -119,7 +120,7 @@ html{
     }
     
     .error-wrapper > .info-wrapper > h1>span{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .error-wrapper > .info-wrapper > h1{
@@ -143,5 +144,15 @@ html{
         margin-right: 5px;
         color: #ff385dbd;
     }
+    .error-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown{
+        margin-right: 15px;
+      }
+      .navbarHost {
+        display: none;
+       }
 }
 /* media queries end here */

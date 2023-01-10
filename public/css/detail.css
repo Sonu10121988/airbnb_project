@@ -119,5 +119,16 @@
 .reviewOffersLeft{
   display: none;
 }
- } 
+.px-5{
+  font-size: 15px;
+}
+
+.dropdown{
+  margin-right: 15px;
+}
+.navbarHost {
+  display: none;
+ }
+}
+ 
  /* media queries end here  */
