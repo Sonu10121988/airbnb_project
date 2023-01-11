@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("https://images.moneycontrol.com/static-mcnews/2021/04/Roof-top-pool-2-taj-goa.jpg?impolicy=website&width=770&height=431");
+    background-image: url("https://interxion.azureedge.net/cdn/ff/a-bVP4M3olsRvs1G5Gu_YdqZ0XHSXiUvRFrzASyO48U/1615272399/public/styles/og_image/public/2019-12/homepage-header-background-1%20%284%29_1.jpg?itok=oSUN0_tD");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,11 +15,10 @@ body{
 }
 
 .signupForm {
-    width: 650px;
+    width: 670px;
     height: 600px;
-    border: 3px solid rgb(87, 135, 195);
     border-radius: 10px;
-    margin-left: 5rem;
+    margin-left: 19rem;
     margin-top: 5rem;
     margin-bottom: 3rem;
     padding: 5px;
@@ -27,11 +26,14 @@ body{
 }
 .signupForm h2{
     font-style: italic;
-    color: brown;
-     margin-left: 4rem;
+    color: white;
+    margin-left: 4rem;
 }
 .col-12{
     margin-top: 5px;
+}
+label{
+    color: white;
 }
 #exampleInputPassword1{
     width: 450px;
@@ -46,15 +48,15 @@ body{
         height: 110vh;
     }
     .signupForm {
-         width: 450px;
-        height: 670px; 
+        width: 450px;
+        height: 670px;
         margin-left: 0.5rem;
         margin-right: 10px;
     } 
     .dropdown{
         margin-right: 20px;
       }
-      .navbarHost a {
+      .navbarHost {
         display: none;
        }
        #exampleInputPassword1{
@@ -67,5 +69,4 @@ body{
         width: 420px; 
     }
 }
-
 

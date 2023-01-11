@@ -14,26 +14,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="stylesheet" href="../css/adminSignup.css" />
     <title>Admin Signup Form</title>
-    <style>
-   .container-fluid{
-    width: 100%;
-    background: linear-gradient(#f28484, #9198e5);
-   }
-   .signupForm{
-    margin:70px auto;
-   }
-    @media screen and (max-width: 600px) {
-    .container-fluid{
-        width: 150%;
-    }
-    .signupForm {
-        width: 420px;
-        height: 680px;
-    } 
-}
-   
  </style>
   </head>
   <body>
@@ -48,7 +30,7 @@
               <strong><%= message.message %></strong>
           </div>
           <% } %> 
-        <h2>Welcome to Airbnb</h2>
+        <h2>Welcome to Admin Information</h2>
         <form
           action="/adminRegister"
           method="POST"
@@ -57,7 +39,7 @@
         >
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label"
-              >First name</label
+              >First Name</label
             >
             <input
               type="text"
@@ -69,7 +51,7 @@
             />
           </div>
           <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Last name</label>
+            <label for="validationCustom02" class="form-label">Last Name</label>
             <input
               type="text"
               class="form-control"
@@ -81,7 +63,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+              >Email Address</label
             >
             <input
               type="email"
@@ -93,7 +75,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
-              >mobile number</label
+              >Mobile Number</label
             >
             <input
               type="text"
@@ -119,7 +101,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">
-              confirmPassword</label
+              Confirm Password</label
             >
             <input
               type="password"
@@ -130,7 +112,7 @@
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="submit" value="Register">
-              Submit form
+              Submit Form
             </button>
           </div>
         </form>

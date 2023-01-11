@@ -41,6 +41,9 @@
     justify-content: space-between;
     margin-left: 10px;
 }
+.reviewOffersLeft{
+ font-size: 25px;
+}
 .googleMap{
     margin-top: 20px;
 }
