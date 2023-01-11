@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./templates/views"));
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // use session storage for display message :-
 app.use(
@@ -443,6 +443,6 @@ app.get("/help", (req, res) => {
 });
 
 // Server Started :-
-app.listen(port, function () {
-  console.log(`server is listen on port ${port}`);
+app.listen(PORT, function () {
+  console.log(`server is listen on port ${PORT}`);
 });
