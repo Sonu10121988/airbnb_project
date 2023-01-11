@@ -75,10 +75,9 @@
 @media only screen and (max-width: 400px) {
   .contact-box {
     width: 95%;
-    margin: 8% 5%;
+    margin: 11% 5%;
   }
 }
-
 h2 {
   font-family: 'Arimo', sans-serif;
   color: #fff;
