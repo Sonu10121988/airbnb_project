@@ -4,10 +4,10 @@ const ejs = require("ejs");
 const path = require("path");
 const app = express();
 const session = require("express-session");
-const conn = require("./db/connect");
+const conn = require("./src/db/connect");
 const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser");
-const auth = require("./middleware/authenticate");
+const auth = require("./src/middleware/authenticate");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -37,9 +37,9 @@ app.use((req, res, next) => {
 });
 
 // Add require models file :-
-const Register = require("./models/register");
-const adminRegister = require("./models/adminRegister");
-const adminDetail = require("./models/adminBooking");
+const Register = require("./src/models/register");
+const adminRegister = require("./src/models/adminRegister");
+const adminDetail = require("./src/models/adminBooking");
 const { MongoClient } = require("mongodb");
 
 //find data for mongodb atlas :-
