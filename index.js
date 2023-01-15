@@ -114,9 +114,11 @@ app.get("/", async (req, res) => {
   let data = await FindData();
   let data2 = await FindData2();
   //console.log(data2);
+  let show = req.cookies.jwt;
   res.render("index", {
     data: data,
     data2: data2,
+    show:show,
   });
 });
 

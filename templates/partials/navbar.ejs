@@ -36,10 +36,12 @@
         </span>
       </a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/login">LogIn</a></li>
-        <li><a class="dropdown-item" href="/signup">Signup</a></li>
+        <%if(locals.show){%>
         <li><a class="dropdown-item" href="/logout">LogOut</a></li>
-        <li>
+        <%}else{%>
+        <li><a class="dropdown-item" href="/login">LogIn/SignUp</a></li>
+        <%}%>
+       <li>
           <hr class="dropdown-divider" />
         </li>
         <li><a class="dropdown-item" href="/admin">Host your home</a></li>
